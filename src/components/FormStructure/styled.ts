@@ -6,12 +6,6 @@ export const Wrapper = styled.div`
   height: 763px;
   background: white;
   border-radius: 20px;
-
-  & h1 {
-    margin-top: 56px;
-    margin-left: 45px;
-    font-size: 18px;
-  }
 `;
 
 export const GlobalWrapper = styled.div`
@@ -20,4 +14,19 @@ export const GlobalWrapper = styled.div`
   align-items: center;
   background: #eceef2;
   height: 100vh;
+`;
+
+export const HeaderSection = styled.header`
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  & h1 {
+    font-size: 18px;
+  }
+`;
+
+export const FormContent = styled.div`
+  width: 100%;
+  margin-left: 47px;
+  margin-right: 57px;
 `;
