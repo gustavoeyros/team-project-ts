@@ -20,6 +20,7 @@ export const HeaderSection = styled.header`
   display: flex;
   flex-direction: column;
   margin-top: 56px;
+  margin-bottom: 35px;
   & h1 {
     font-size: 18px;
   }

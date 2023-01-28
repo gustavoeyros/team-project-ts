@@ -1,10 +1,9 @@
-//import Basic from "../pages/Basic";
-import FormStructure from "../components/FormStructure";
+import Basic from "../pages/Basic";
 import { Routes, Route } from "react-router-dom";
 const RoutesManager = () => {
   return (
     <Routes>
-      <Route path="/" element={<FormStructure />} />
+      <Route path="/" element={<Basic />} />
     </Routes>
   );
 };

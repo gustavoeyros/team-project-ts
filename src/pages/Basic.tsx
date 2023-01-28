@@ -1,5 +1,11 @@
+import FormStructure from "../components/FormStructure";
+import BasicForm from "../components/BasicForm";
 const Basic = () => {
-   return  <h1>Teste</h1>
-}
+  return (
+    <FormStructure>
+      <BasicForm />
+    </FormStructure>
+  );
+};
 
-export default Basic
+export default Basic;
