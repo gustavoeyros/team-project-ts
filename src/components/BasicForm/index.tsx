@@ -1,3 +1,4 @@
+import Button from "../Button";
 import SelectForm from "../SelectForm";
 import InputForm from "../InputForm";
 import {
@@ -5,6 +6,7 @@ import {
   FormController,
   InlineController,
   CheckboxContainer,
+  ButtonContainer,
 } from "./styled";
 
 const BasicForm = () => {
@@ -102,6 +104,10 @@ const BasicForm = () => {
         <label htmlFor="check"></label>
         <span>I accept the terms and privacy</span>
       </CheckboxContainer>
+
+      <ButtonContainer>
+        <Button>Next</Button>
+      </ButtonContainer>
     </Form>
   );
 };

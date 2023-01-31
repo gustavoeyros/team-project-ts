@@ -29,6 +29,7 @@ export const CheckboxContainer = styled.div`
   display: flex;
   gap: 8px;
   margin-top: 12px;
+  margin-bottom: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   & input {
     display: none;
@@ -52,4 +53,9 @@ export const CheckboxContainer = styled.div`
     background-color: #074ee8;
     border: 1.5px solid #074ee8;
   }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `;
