@@ -1,6 +1,11 @@
 import SelectForm from "../SelectForm";
 import InputForm from "../InputForm";
-import { Form, FormController, InlineController } from "./styled";
+import {
+  Form,
+  FormController,
+  InlineController,
+  CheckboxContainer,
+} from "./styled";
 
 const BasicForm = () => {
   //days
@@ -91,6 +96,12 @@ const BasicForm = () => {
           </FormController>
         </InlineController>
       </FormController>
+
+      <CheckboxContainer>
+        <input type="checkbox" id="check" />
+        <label htmlFor="check"></label>
+        <span>I accept the terms and privacy</span>
+      </CheckboxContainer>
     </Form>
   );
 };
