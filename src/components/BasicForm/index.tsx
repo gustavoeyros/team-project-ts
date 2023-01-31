@@ -1,7 +1,17 @@
+import SelectForm from "../SelectForm";
 import InputForm from "../InputForm";
 import { Form, FormController, InlineController } from "./styled";
 
 const BasicForm = () => {
+  const days = [];
+  for (let i = 1; i <= 31; i++) {
+    if (i < 10) {
+      days.push(`0${i}`);
+    } else {
+      days.push(`${i}`);
+    }
+  }
+
   return (
     <Form>
       <FormController>
@@ -45,6 +55,13 @@ const BasicForm = () => {
           />
         </FormController>
       </InlineController>
+
+      <FormController>
+        <span>Birthday *</span>
+        <InlineController>
+          <SelectForm content={days} />
+        </InlineController>
+      </FormController>
     </Form>
   );
 };
