@@ -11,4 +11,5 @@ export const InputStyle = styled.input`
   padding: 12px;
   font-size: 16px;
   width: ${(props: inputWidth) => props.width}px;
+  outline: none;
 `;
