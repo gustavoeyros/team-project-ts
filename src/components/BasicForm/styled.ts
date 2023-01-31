@@ -12,6 +12,11 @@ export const FormController = styled.div`
   gap: 4px;
   color: #767676;
   font-size: 14px;
+
+  & span {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
 `;
 
 export const InlineController = styled.div`

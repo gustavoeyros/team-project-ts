@@ -3,13 +3,20 @@ import InputForm from "../InputForm";
 import { Form, FormController, InlineController } from "./styled";
 
 const BasicForm = () => {
+  //days
   const days = [];
   for (let i = 1; i <= 31; i++) {
-    if (i < 10) {
-      days.push(`0${i}`);
-    } else {
-      days.push(`${i}`);
-    }
+    i < 10 ? days.push(`0${i}`) : days.push(`${i}`);
+  }
+  //month
+  const month = [];
+  for (let i = 1; i <= 12; i++) {
+    i < 10 ? month.push(`0${i}`) : month.push(`${i}`);
+  }
+  //year
+  const year = [];
+  for (let i = 1; i <= 113; i++) {
+    year.push(`${new Date().getFullYear() - i}`);
   }
 
   return (
@@ -59,7 +66,29 @@ const BasicForm = () => {
       <FormController>
         <span>Birthday *</span>
         <InlineController>
-          <SelectForm content={days} />
+          <FormController>
+            <label htmlFor="">Day</label>
+            <SelectForm content={days} />
+          </FormController>
+
+          <FormController>
+            <label htmlFor="">Month</label>
+            <SelectForm content={month} />
+          </FormController>
+
+          <FormController>
+            <label htmlFor="">Year</label>
+            <SelectForm content={year} />
+          </FormController>
+          <FormController>
+            <label htmlFor="">Age</label>
+            <InputForm
+              type="number"
+              id="fullname"
+              placeholder="18"
+              width="101"
+            />
+          </FormController>
         </InlineController>
       </FormController>
     </Form>
