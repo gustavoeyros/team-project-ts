@@ -12,7 +12,7 @@ export const WrapperSection = styled.div`
 `;
 
 export const ColorLine = styled.div`
-  width: 176px;
+  width: 171px;
   height: 44px;
   font-size: 16px;
   display: flex;

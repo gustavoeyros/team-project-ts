@@ -1,5 +1,8 @@
-import nextIcon from "../../assets/nextIcon.svg";
 import styled from "styled-components";
+
+interface buttonWidth {
+  readonly width: string;
+}
 
 export const ButtonStyled = styled.button`
   display: flex;
@@ -10,12 +13,8 @@ export const ButtonStyled = styled.button`
   color: #ffffff;
   background: #074ee8;
   font-size: 16px;
-  width: 81px;
+  gap: 12px;
+  width: ${(props: buttonWidth) => props.width}px;
   height: 40px;
   border-radius: 4px;
-  padding-right: 25px;
-  background-image: url(${nextIcon});
-  background-repeat: no-repeat;
-  background-position: 80% center;
-  background-size: 9px;
 `;

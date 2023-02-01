@@ -8,6 +8,7 @@ import {
   CheckboxContainer,
   ButtonContainer,
 } from "./styled";
+import nextIcon from "../../assets/nextIcon.svg";
 
 const BasicForm = () => {
   //days
@@ -106,7 +107,9 @@ const BasicForm = () => {
       </CheckboxContainer>
 
       <ButtonContainer>
-        <Button>Next</Button>
+        <Button width="82">
+          Next <img src={nextIcon} />
+        </Button>
       </ButtonContainer>
     </Form>
   );

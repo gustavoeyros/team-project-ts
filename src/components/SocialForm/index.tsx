@@ -1,3 +1,4 @@
+import nextIcon from "../../assets/nextIcon.svg";
 import Button from "../Button";
 import { Form, FormController, ButtonContainer } from "./styled";
 import InputForm from "../InputForm";
@@ -25,7 +26,9 @@ const SocialForm = () => {
       </FormController>
 
       <ButtonContainer>
-        <Button>Next</Button>
+        <Button width="82">
+          Next <img src={nextIcon} />
+        </Button>
       </ButtonContainer>
     </Form>
   );

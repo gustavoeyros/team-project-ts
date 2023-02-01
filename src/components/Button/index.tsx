@@ -1,6 +1,8 @@
 import { ButtonStyled } from "./styled";
-const Button: React.FC<{ children: React.ReactNode }> = (props) => {
-  return <ButtonStyled>{props.children}</ButtonStyled>;
+const Button: React.FC<{ children: React.ReactNode; width: string }> = (
+  props
+) => {
+  return <ButtonStyled width={props.width}>{props.children}</ButtonStyled>;
 };
 
 export default Button;
