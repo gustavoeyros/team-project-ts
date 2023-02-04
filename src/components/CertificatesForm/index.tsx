@@ -63,7 +63,7 @@ const CertificatesForm = () => {
         </FormController>
 
         <FinishContainer>
-          <Button width="91">
+          <Button width="91" path="/">
             <img src={finishIcon} />
             Finish
           </Button>

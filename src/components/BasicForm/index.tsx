@@ -107,7 +107,7 @@ const BasicForm = () => {
       </CheckboxContainer>
 
       <ButtonContainer>
-        <Button width="82">
+        <Button width="82" path="/social">
           Next <img src={nextIcon} />
         </Button>
       </ButtonContainer>

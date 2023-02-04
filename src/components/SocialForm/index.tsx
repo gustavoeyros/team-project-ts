@@ -26,7 +26,7 @@ const SocialForm = () => {
       </FormController>
 
       <ButtonContainer>
-        <Button width="82">
+        <Button width="82" path="/certificates">
           Next <img src={nextIcon} />
         </Button>
       </ButtonContainer>
