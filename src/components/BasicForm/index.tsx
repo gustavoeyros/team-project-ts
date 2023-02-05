@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { UserContext } from "../../store/user-context";
 import Button from "../Button";
 import SelectForm from "../SelectForm";
 import InputForm from "../InputForm";
@@ -11,6 +13,16 @@ import {
 import nextIcon from "../../assets/nextIcon.svg";
 
 const BasicForm = () => {
+  const { setUserInput, userInput } = useContext(UserContext);
+
+  console.log(userInput);
+
+  const onChangeHandler = (e: React.FormEvent<HTMLInputElement>) => {
+    setUserInput({
+      ...userInput,
+      [e.currentTarget.name]: e.currentTarget.value,
+    });
+  };
   //days
   const days = [];
   for (let i = 1; i <= 31; i++) {
@@ -36,6 +48,8 @@ const BasicForm = () => {
           id="fullname"
           placeholder="Foo Bar"
           width="515"
+          name="fullName"
+          onChange={onChangeHandler}
         />
       </FormController>
 
@@ -46,6 +60,8 @@ const BasicForm = () => {
           id="nickname"
           placeholder="Juanito"
           width="515"
+          name="nickname"
+          onChange={onChangeHandler}
         />
       </FormController>
 
@@ -57,6 +73,8 @@ const BasicForm = () => {
             id="email"
             placeholder="foo@bar.com"
             width="330"
+            name="email"
+            onChange={onChangeHandler}
           />
         </FormController>
 
@@ -67,6 +85,8 @@ const BasicForm = () => {
             id="phone"
             placeholder="(83) 00000-0000"
             width="162"
+            name="phone"
+            onChange={onChangeHandler}
           />
         </FormController>
       </InlineController>

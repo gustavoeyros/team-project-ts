@@ -4,6 +4,8 @@ const InputForm: React.FC<{
   placeholder: string;
   id: string;
   width: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  name?: string;
 }> = (props) => {
   return (
     <InputStyle
@@ -11,6 +13,8 @@ const InputForm: React.FC<{
       placeholder={props.placeholder}
       id={props.id}
       width={props.width}
+      onChange={props.onChange}
+      name={props.name}
     />
   );
 };
