@@ -12,10 +12,28 @@ import {
 } from "./styled";
 import nextIcon from "../../assets/nextIcon.svg";
 
-const BasicForm = () => {
-  const { setUserInput, userInput } = useContext(UserContext);
+interface IUser {
+  fullName: "";
+  nickname: "";
+  email: "";
+  birthday: "";
+  age: "";
+  terms: false;
+  linkedin: "";
+  github: "";
+  certificates: "";
+  teamName: "";
+  institution: "";
+  graduation: "";
+}
 
-  console.log(userInput);
+interface IContext {
+  userInput: IUser[];
+  setUserInput: React.Dispatch<React.SetStateAction<any>>;
+}
+
+const BasicForm = () => {
+  const { setUserInput, userInput } = useContext(UserContext) as IContext;
 
   const onChangeHandler = (e: React.FormEvent<HTMLInputElement>) => {
     setUserInput({
